@@ -2,10 +2,14 @@
 //
 
 #include "stdafx.h"
-
+#include "header.h"
+#include <iostream>
 
 int main()
 {
+	test_function();
+	int z;
+	std::cin >> z;
     return 0;
 }
 
