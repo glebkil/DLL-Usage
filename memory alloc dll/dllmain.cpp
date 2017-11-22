@@ -1,6 +1,15 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
+/*Разработать библиотеку динамической компоновки (DLL), которая включает в себя следующие функции для работы с динамическим массивом:
+a. функцию распределения динамической памяти;
+b. функцию инициализации динамического массива;
+c. функцию печати динамического массива;
+d. функцию удаления динамического массива;
+e. функцию добавления элемента в конец массива;
+f. функцию вставки элемента по указанному индексу;
+g. функцию удаления элемента по указанному индексу.
+2.*/
 #include <windows.h>
-#define __MYDLL__
+#define __EXPORT__
 #include "header.h"
 #include <iostream>
 #include "stdafx.h"
@@ -22,7 +31,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 	return TRUE;
 }
 
-void test_function()
+void Memalloc::test_function()
 {
 	std::cout << "success!";
 }

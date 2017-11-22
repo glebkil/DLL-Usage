@@ -1,9 +1,12 @@
 #pragma once
 #include "stdafx.h"
-#ifdef __MYDLL__
-#define SIMPLE_EXAMPLE __declspec(dllexport)
+#ifdef __EXPORT__
+#define _DECL_ __declspec(dllexport)
 #else
-#define SIMPLE_EXAMPLE __declspec(dllimport)
+#define _DECL_ __declspec(dllimport)
 #endif
 
-SIMPLE_EXAMPLE void test_function();
+class _DECL_ Memalloc {
+public:
+	static void test_function();
+};
